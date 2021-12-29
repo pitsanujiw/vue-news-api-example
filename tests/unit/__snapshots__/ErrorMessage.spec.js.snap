@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorMessage Renders ErrorMessage Component 1`] = `
+<div class="d-flex align-center mx-auto justify-center" style="height: calc(100vh - 125px);">
+  <div>
+    <div class="mr-10 ml-10 d-flex justify-center text-h7 text-center">
+      Opps! The page may be broken, or the page may have been error.
+    </div>
+    <div class="mr-10 ml-10 d-flex justify-center text-h7 text-center">
+      Check to see if the page you're trying to reload again.
+    </div>
+    <div class="d-flex mt-10 justify-center">
+      <v-btn-stub color="primary" tag="button" activeclass="" type="button">Reload</v-btn-stub>
+    </div>
+  </div>
+</div>
+`;

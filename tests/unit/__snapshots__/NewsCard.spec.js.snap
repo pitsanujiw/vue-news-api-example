@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsCard Renders NewsCard Component 1`] = `
+<v-card-stub loaderheight="4" tag="div" maxwidth="350" minwidth="350" class="ma-2">
+  <v-img-stub height="250" options="[object Object]" position="center center" src="" transition="src" class="white--text align-end"></v-img-stub>
+  <v-card-actions-stub tag="div" class="d-flex justify-end">
+    <v-btn-stub color="lighten-2" tag="button" activeclass="" href="" target="_blank" text="true" type="button" class="justify-end">See more</v-btn-stub>
+  </v-card-actions-stub>
+  <v-card-title-stub tag="div"></v-card-title-stub>
+  <v-card-subtitle-stub tag="div">
+    <v-chip-stub activeclass="" tag="span" active="true" closeicon="$delete" closelabel="$vuetify.close" filtericon="$complete" class="mt-2"></v-chip-stub>
+  </v-card-subtitle-stub>
+  <v-card-text-stub tag="div">
+    <p>-</p>
+    <div>
+
+    </div>
+  </v-card-text-stub>
+</v-card-stub>
+`;
