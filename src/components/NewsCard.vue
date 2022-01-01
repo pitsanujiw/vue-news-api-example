@@ -4,54 +4,46 @@
       height="250"
       class="white--text align-end"
       transition="src"
-      :src="urlToImage"
+      :src="newsArticle.urlToImage"
     >
     </v-img>
     <v-card-actions class="d-flex justify-end">
-      <v-btn color="lighten-2" text class="justify-end" :href="url" target="_blank">See more</v-btn>
+      <news-detail :newsArticle="newsArticle" />
     </v-card-actions>
-    <v-card-title>{{ title }}</v-card-title>
+    <v-card-title>{{ newsArticle.title }}</v-card-title>
     <v-card-subtitle
-      ><v-chip class="mt-2">{{ source }}</v-chip></v-card-subtitle
+      ><v-chip class="mt-2">{{
+        newsArticle.source.name
+      }}</v-chip></v-card-subtitle
     >
     <v-card-text>
-      <p>{{ author || "-" }}</p>
+      <p>{{ newsArticle.author || "-" }}</p>
+      <v-divider></v-divider>
 
       <div>
-        {{ content }}
+        {{ newsArticle.description || '-' }}
       </div>
     </v-card-text>
   </v-card>
 </template>
 
 <script>
+import newsDetail from './NewsDetail.vue';
+
 export default {
   name: 'newsCard',
   props: {
-    urlToImage: {
-      type: String,
-      default: '',
+    newsArticle: {
+      type: Object,
     },
-    title: {
-      type: String,
-      default: '',
-    },
-    author: {
-      type: String,
-      default: '',
-    },
-    content: {
-      type: String,
-      default: '',
-    },
-    source: {
-      type: String,
-      default: '',
-    },
-    url: {
-      type: String,
-      default: '',
-    },
+  },
+  data: () => ({
+    news: undefined,
+  }),
+  methods: {
+  },
+  components: {
+    newsDetail,
   },
 };
 </script>
