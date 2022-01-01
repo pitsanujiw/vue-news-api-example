@@ -4,18 +4,18 @@ exports[`FilterDialog Renders FilterDialog Component 1`] = `
 <div class="d-flex justify-end">
   <v-dialog-stub opendelay="0" closedelay="0" contentclass="" origin="center center" retainfocus="true" transition="dialog-transition" width="500">
     <v-card-stub loaderheight="4" tag="div">
-      <v-card-title-stub tag="div" class="text-h5 grey lighten-2">
-        FILTER NEWS
+      <v-card-title-stub tag="div" class="text-h5">
+        Search news top highlight
       </v-card-title-stub>
       <v-card-text-stub tag="div">
         <v-text-field-stub errorcount="1" errormessages="" messages="" rules="" successmessages="" backgroundcolor="" label="Search news" loaderheight="2" clearicon="$clear" placeholder="Search" type="text"></v-text-field-stub>
-        <v-autocomplete-stub color="white" errorcount="1" errormessages="" messages="" rules="" successmessages="" value="[Function]" appendicon="$dropdown" backgroundcolor="" label="sources" loaderheight="2" clearicon="$clear" type="text" valuecomparator="[Function]" nodatatext="$vuetify.noDataText" items="" itemcolor="primary" itemdisabled="disabled" itemtext="name" itemvalue="id" menuprops="[object Object]" allowoverflow="true" filter="[Function]"></v-autocomplete-stub>
+        <v-autocomplete-stub color="white" errorcount="1" errormessages="" messages="" rules="" successmessages="" appendicon="$dropdown" backgroundcolor="" label="sources" loaderheight="2" clearable="true" clearicon="$clear" type="text" valuecomparator="[Function]" nodatatext="$vuetify.noDataText" items="" itemcolor="primary" itemdisabled="disabled" itemtext="name" itemvalue="id" menuprops="[object Object]" allowoverflow="true" filter="[Function]"></v-autocomplete-stub>
       </v-card-text-stub>
       <v-divider-stub></v-divider-stub>
       <v-card-actions-stub tag="div">
         <v-btn-stub tag="button" activeclass="" depressed="true" type="button">CLOSE</v-btn-stub>
         <v-spacer-stub tag="div"></v-spacer-stub>
-        <v-btn-stub color="primary" tag="button" activeclass="" depressed="true" type="button">SEARCH</v-btn-stub>
+        <v-btn-stub dark="true" tag="button" activeclass="" type="button">SEARCH</v-btn-stub>
       </v-card-actions-stub>
     </v-card-stub>
   </v-dialog-stub>

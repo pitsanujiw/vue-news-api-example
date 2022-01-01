@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsCard Renders HistoryTable Component 1`] = `
+<v-simple-table-stub dark="true">
+  <thead>
+    <tr>
+      <td>Title</td>
+      <td>Source</td>
+      <td>Autdor</td>
+      <td>Visitor dates</td>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</v-simple-table-stub>
+`;

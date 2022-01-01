@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsCard Renders AppBarManatal Component 1`] = `
+<v-app-bar-stub dark="true" tag="header" extensionheight="48" src="" value="true" app="true" class="elevation-0" newsarticle="[object Object]">
+  <div class="text-h5">Manatal News</div>
+  <v-spacer-stub tag="div"></v-spacer-stub>
+  <filter-dialog-stub></filter-dialog-stub>
+  <v-menu-stub opendelay="0" closedelay="0" bottom="true" left="true" contentclass="" maxwidth="auto" nudgebottom="0" nudgeleft="0" nudgeright="0" nudgetop="0" nudgewidth="0" openonclick="true" closeonclick="true" closeoncontentclick="true" maxheight="auto" origin="top left" transition="v-menu-transition">
+    <v-list-stub tag="div">
+      <v-list-item-stub activeclass="" to="/" tag="div">
+        <v-list-item-title-stub tag="div">News</v-list-item-title-stub>
+      </v-list-item-stub>
+      <v-list-item-stub activeclass="" to="/history" tag="div">
+        <v-list-item-title-stub tag="div">History</v-list-item-title-stub>
+      </v-list-item-stub>
+      <v-list-item-stub activeclass="" tag="div">
+        <v-list-item-title-stub tag="div">Try Error Message</v-list-item-title-stub>
+      </v-list-item-stub>
+    </v-list-stub>
+  </v-menu-stub>
+</v-app-bar-stub>
+`;

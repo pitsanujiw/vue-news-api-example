@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsCard Renders NewsDetail Component 1`] = `
+<div class="text-center">
+  <v-dialog-stub opendelay="0" closedelay="0" contentclass="" origin="center center" retainfocus="true" transition="dialog-transition" width="800">
+    <v-card-stub loaderheight="4" tag="div" class="mx-auto">
+      <v-img-stub height="200px" gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)" options="[object Object]" position="center center" src="__URL__" transition="fade-transition" class="white--text align-end">
+        <v-card-title-stub tag="div">__TITLE__</v-card-title-stub>
+      </v-img-stub>
+      <v-card-subtitle-stub tag="div" class="pb-0 mt-5">01 January 2022</v-card-subtitle-stub>
+      <v-card-subtitle-stub tag="div">
+        <v-chip-stub activeclass="" tag="span" active="true" closeicon="$delete" closelabel="$vuetify.close" filtericon="$complete" class="mt-2">__SOURCE_NAME__</v-chip-stub>
+      </v-card-subtitle-stub>
+      <v-card-text-stub tag="div" class="text--primary">
+        <div class="mb-2">__AUTHOR__</div>
+        <v-divider-stub></v-divider-stub>
+        <div class="mt-2"></div>
+      </v-card-text-stub>
+      <v-card-actions-stub tag="div">
+        <v-btn-stub color="dark" tag="button" activeclass="" target="_blank" text="true" type="button">
+          Explore
+        </v-btn-stub>
+      </v-card-actions-stub>
+    </v-card-stub>
+  </v-dialog-stub>
+</div>
+`;

@@ -10,7 +10,7 @@ exports[`ErrorMessage Renders ErrorMessage Component 1`] = `
       Check to see if the page you're trying to reload again.
     </div>
     <div class="d-flex mt-10 justify-center">
-      <v-btn-stub color="primary" tag="button" activeclass="" type="button">Reload</v-btn-stub>
+      <v-btn-stub dark="true" tag="button" activeclass="" type="button">Reload</v-btn-stub>
     </div>
   </div>
 </div>

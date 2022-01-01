@@ -2,7 +2,7 @@ import { shallowMount, createLocalVue } from '@vue/test-utils';
 import Vuex from 'vuex';
 import Vuetify from 'vuetify';
 
-import NewsCard from '../../src/components/NewsCard.vue';
+import AppBarManatal from '../../src/components/AppBarManatal.vue';
 
 const vuetify = new Vuetify();
 const localVue = createLocalVue();
@@ -24,8 +24,8 @@ describe('NewsCard', () => {
     });
   });
 
-  it('Renders NewsCard Component', () => {
-    const wrapper = shallowMount(NewsCard, {
+  it('Renders AppBarManatal Component', () => {
+    const wrapper = shallowMount(AppBarManatal, {
       store,
       localVue,
       vuetify,

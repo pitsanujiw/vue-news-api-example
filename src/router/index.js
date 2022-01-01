@@ -9,6 +9,11 @@ const routes = [
     name: 'News',
     component: () => import('@/views/News.vue'),
   },
+  {
+    path: '/history',
+    name: 'History',
+    component: () => import('@/views/History.vue'),
+  },
 ];
 
 const router = new VueRouter({
