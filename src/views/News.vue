@@ -48,7 +48,7 @@ export default {
   },
   methods: {
     ...mapActions(['newsTopHighlight', 'newSources', 'getTopHighLightsError']),
-    async infiniteScrolling(_entries, _observer, isIntersecting) {
+    async infiniteScrolling(_entries, _observer, isIntersecting) { // for fetch apo
       if (!isIntersecting) {
         return;
       }

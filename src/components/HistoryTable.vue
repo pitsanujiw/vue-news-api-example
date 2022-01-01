@@ -26,7 +26,7 @@ import { mapGetters } from 'vuex';
 
 import { onChangeFormatDate } from '@/utils';
 
-export default {
+export default { // show history page and date time
   name: 'HistoryTable',
   data: () => ({}),
   methods: {

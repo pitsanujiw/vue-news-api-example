@@ -12,6 +12,9 @@ const PARAMS = {
   apiKey: API_KEY,
 };
 
+/**
+ * @class ServiceInstance
+ */
 export default class ServiceInstance {
   constructor() {
     this.instance = axios.create({

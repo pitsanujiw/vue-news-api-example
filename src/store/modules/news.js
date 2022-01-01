@@ -15,18 +15,18 @@ const service = new ServiceInstance();
 
 const newsModule = {
   state: {
-    topHighLights: [],
-    search: '',
-    country: 'us',
-    sources: '',
-    page: DEFAULT_PAGE,
-    pageSize: DEFAULT_PAGE_SIZE,
-    isInfinite: false,
-    isError: false,
+    topHighLights: [], // article top news
+    search: '', // for query
+    country: 'us', // country default
+    sources: '', // for search by sources
+    page: DEFAULT_PAGE, // start page
+    pageSize: DEFAULT_PAGE_SIZE, // limit
+    isInfinite: false, // for validate when data is more than or equal total result
+    isError: false, // for error by api or web view
   },
   mutations: {
     [SET_TOP_HIGHLIGHT]: (state, { topHighlights, isSearch }) => {
-      const articles = filterTopHighLight(get(topHighlights, 'articles'));
+      const articles = filterTopHighLight(get(topHighlights, 'articles')); // filter undefined fields
 
       if (isSearch) {
         state.topHighLights = articles;
@@ -64,6 +64,9 @@ const newsModule = {
   },
   actions: {
     newsTopHighlight: async ({ commit, state }, isSearch = false) => {
+      // mutation for get new top highlight and support search and pagination by scroll
+      // is Search is true will tricker loading screen
+      // isInfinite is true will stop fetch api
       try {
         if (state.isInfinite) {
           return;

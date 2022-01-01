@@ -2,7 +2,7 @@ import { ADD_HISTORY } from '@/constants';
 
 const historyModule = {
   state: {
-    histories: [],
+    histories: [], // history list
   },
   getters: {
     getHistories: (state) => state.histories,

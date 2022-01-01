@@ -61,7 +61,7 @@ export default {
   methods: {
     ...mapActions(['addHistory']),
     onOpenDialog() {
-      this.addHistory(this.newsArticle);
+      this.addHistory(this.newsArticle); // add history when user click see article news
     },
     onChangeFormatDate,
   },

@@ -56,8 +56,8 @@ export default {
     ...mapMutations({
       setQuery: SET_QUERY,
       setSourcesText: SET_SOURCES_FILTER,
-    }),
-    ...mapActions(['newsTopHighlight']),
+    }), // map mutation setQuery for search highlight news
+    ...mapActions(['newsTopHighlight']), // map action for apply query
     setSearch(text) {
       this.setQuery(text);
     },

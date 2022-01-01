@@ -2,7 +2,7 @@ import { SET_LOADING } from '@/constants';
 
 const commonModule = {
   state: {
-    isLoading: false,
+    isLoading: false, // tricker loading screen
   },
   mutations: {
     [SET_LOADING]: (state, isLoading) => {

@@ -39,10 +39,10 @@ export default {
   methods: {
     ...mapActions(['getTopHighLightsError']),
     async setError() {
-      await this.getTopHighLightsError();
+      await this.getTopHighLightsError(); // for try error page
     },
     redirectHome() {
-      this.$router.push('/');
+      this.$router.push('/'); // push router to home page is News page
     },
   },
 };

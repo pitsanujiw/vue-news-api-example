@@ -29,7 +29,7 @@ export default {
       resetState: RESET_STATE,
     }),
     ...mapActions(['newsTopHighlight']),
-    async resetAndFetch() {
+    async resetAndFetch() { // for reset query when query error
       this.resetState();
       await this.newsTopHighlight();
     },

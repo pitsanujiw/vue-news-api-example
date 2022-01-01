@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'SkeletonLoader',
+  name: 'SkeletonLoader', // for loading screen
 };
 </script>
 
