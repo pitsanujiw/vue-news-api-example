@@ -33,6 +33,7 @@
         </v-card-text>
 
         <v-card-actions>
+          <v-btn text @click="dialog = false">Close</v-btn>
           <v-btn color="dark" text :href="newsArticle.url" target="_blank">
             Explore
           </v-btn>
