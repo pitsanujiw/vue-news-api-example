@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <error-message v-if="getIsError" />
+    <error-message v-if="getIsError || !getTopHighLights.length" />
     <div v-else>
       <div class="text-h6 mb-5 mt-md-2">TOP HIGHLIGHT</div>
       <skeleton-loader v-if="getIsLoading" />

@@ -51,6 +51,7 @@ const newsModule = {
       state.isInfinite = false;
     },
     [RESET_STATE]: (state) => {
+      state.search = '';
       state.isInfinite = false;
       state.isError = false;
     },
