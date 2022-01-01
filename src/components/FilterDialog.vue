@@ -2,12 +2,12 @@
   <div class="d-flex justify-end">
     <v-dialog v-model="dialog" width="500">
       <template v-slot:activator="{ on, attrs }">
-        <v-btn color="primary" dark v-bind="attrs" v-on="on"> Filter </v-btn>
+        <v-btn dark v-bind="attrs" v-on="on" icon> <v-icon>mdi-magnify</v-icon></v-btn>
       </template>
 
       <v-card>
-        <v-card-title class="text-h5 grey lighten-2">
-          FILTER NEWS
+        <v-card-title class="text-h5">
+          Search news top highlight
         </v-card-title>
 
         <v-card-text>
@@ -34,7 +34,7 @@
         <v-card-actions>
           <v-btn depressed @click="onClose()">CLOSE</v-btn>
           <v-spacer></v-spacer>
-          <v-btn color="primary" depressed @click="onFilter()">SEARCH</v-btn>
+          <v-btn dark @click="onFilter()">SEARCH</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
