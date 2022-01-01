@@ -3,11 +3,10 @@ import { get } from 'lodash';
 import { ServiceInstance, filterTopHighLight } from '@/utils';
 import {
   SET_TOP_HIGHLIGHT,
-  SET_TOP_HIGHLIGHT_LOADING,
   SET_SOURCES_FILTER,
   SET_QUERY,
-  SET_SOURCES,
   RESET_STATE,
+  SET_LOADING,
 } from '@/constants';
 
 const DEFAULT_PAGE = 0;
@@ -17,9 +16,7 @@ const service = new ServiceInstance();
 const newsModule = {
   state: {
     topHighLights: [],
-    newsSources: [],
     search: '',
-    isLoading: false,
     country: 'us',
     sources: '',
     page: DEFAULT_PAGE,
@@ -43,12 +40,6 @@ const newsModule = {
         state.isInfinite = true;
       }
     },
-    [SET_SOURCES]: (state, newSource) => {
-      state.newsSources = get(newSource, 'sources') || [];
-    },
-    [SET_TOP_HIGHLIGHT_LOADING]: (state, isLoading) => {
-      state.isLoading = isLoading;
-    },
     [SET_SOURCES_FILTER]: (state, sources) => {
       state.sources = sources;
       state.page = DEFAULT_PAGE;
@@ -66,24 +57,11 @@ const newsModule = {
   },
   getters: {
     getTopHighLights: (state) => state.topHighLights,
-    getNewsSources: (state) => state.newsSources,
     getSearch: (state) => state.search,
     getSources: (state) => state.sources,
-    getIsTopHighlightLoading: (state) => state.isLoading,
     getIsError: (state) => state.isError,
   },
   actions: {
-    setTopHighlightLoading: ({ commit }, isLoading) => {
-      commit(SET_TOP_HIGHLIGHT_LOADING, isLoading);
-    },
-    newSources: async ({ commit, state }) => {
-      try {
-        const { data: newSource } = await service.getNewsSources();
-        commit(SET_SOURCES, newSource);
-      } catch (err) {
-        state.isError = true;
-      }
-    },
     newsTopHighlight: async ({ commit, state }, isSearch = false) => {
       try {
         if (state.isInfinite) {
@@ -93,7 +71,7 @@ const newsModule = {
         state.page += 1;
 
         if (!state.topHighLights.length || isSearch) {
-          state.isLoading = true;
+          commit(SET_LOADING, true);
           state.page = DEFAULT_PAGE;
           state.pageSize = DEFAULT_PAGE_SIZE;
         }
@@ -106,24 +84,24 @@ const newsModule = {
         });
 
         if (!state.topHighLights.length || isSearch) {
-          state.isLoading = false;
+          commit(SET_LOADING, false);
         }
 
         commit(SET_TOP_HIGHLIGHT, { topHighlights, isSearch });
       } catch (err) {
         state.isInfinite = true;
         state.isError = true;
-        commit(SET_TOP_HIGHLIGHT_LOADING, false);
+        commit(SET_LOADING, false);
       }
     },
     getTopHighLightsError: async ({ commit, state }) => {
       try {
-        state.isLoading = true;
+        commit(SET_LOADING, true);
         await service.getTopHighlightError();
       } catch (err) {
         state.isInfinite = true;
         state.isError = true;
-        commit(SET_TOP_HIGHLIGHT_LOADING, false);
+        commit(SET_LOADING, false);
       }
     },
   },
