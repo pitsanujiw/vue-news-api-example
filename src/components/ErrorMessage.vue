@@ -11,7 +11,7 @@
         Check to see if the page you're trying to reload again.
       </div>
       <div class="d-flex mt-10 justify-center">
-        <v-btn color="primary" @click="resetAndFetch">Reload</v-btn>
+        <v-btn dark @click="resetAndFetch">Reload</v-btn>
       </div>
     </div>
   </div>
